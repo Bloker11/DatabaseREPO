@@ -1,0 +1,5 @@
+CREATE DATABASE "Cars"
+    WITH 
+    OWNER = "Alladin"
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
