@@ -1,0 +1,18 @@
+
+    -- Table: public.logs
+
+-- DROP TABLE public.logs;
+
+CREATE TABLE IF NOT EXISTS public.logs
+(
+    logid integer NOT NULL DEFAULT nextval('logs_logid_seq'::regclass),
+    loguser character varying(200) COLLATE pg_catalog."default",
+    logoperation character varying(255) COLLATE pg_catalog."default",
+    logdata character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT logs_pkey PRIMARY KEY (logid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.logs
+    OWNER to "postgres";
